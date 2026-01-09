@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <!-- Primary Meta Tags -->
+  <title>Vegeta's Elite Saiyan Quiz - Results</title>
+  <meta name="title" content="Vegeta's Elite Saiyan Quiz - Results">
+  <meta name="description" content="See your Dragon Ball Z quiz results! Discover your Saiyan rank and power level after completing Vegeta's Elite Training Academy challenge.">
+  <meta name="keywords" content="Dragon Ball Z, DBZ Quiz Results, Vegeta, Saiyan Rank, Anime Quiz, Dragon Ball Quiz, DBZ Trivia">
+  <meta name="author" content="Vegeta's Elite Training Academy">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vegeta's Elite Saiyan Quiz - Results">
+  <meta property="og:description" content="See your Dragon Ball Z quiz results! Discover your Saiyan rank and power level after completing the elite challenge.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Vegeta's Elite Saiyan Quiz">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/fab.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/fab.ico">
+  <link rel="apple-touch-icon" href="../assets/fab.ico">
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#1a0f2e">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Anime.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body class="results-page">
+  <!-- VIDEO BACKGROUND WALLPAPER -->
+    <video id="backgroundVideo" class="background-video" autoplay muted loop>
+        <source src="../assets/goku.mp4" type="video/mp4">
+    </video>
+    <div class="content-wrapper">
+
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-spinner"></div>
+    <div class="loading-text" id="loadingText">Analyzing...</div>
+  </div>
+
+  <div class="container">
+    <div class="app-wrapper">
+
+      <aside class="coach-panel">
+        <div class="coach-avatar">
+          <div class="coach-avatar-placeholder">
+            VEGETA<br>PRINCE OF<br>SAIYANS
+          </div>
+        </div>
+        
+        <h2 class="coach-name">VEGETA</h2>
+        
+        <div class="coach-message" id="coachMessage">
+          Listen up! I'm only going to say this once. This quiz will test your knowledge. Don't disappoint me.
+        </div>
+        
+
+      </aside>
+
+      <main class="content-area">
+        <section class="screen active" id="resultsScreen">
+          <div class="results-screen">
+            <h1 class="results-title">TRAINING COMPLETE</h1>
+            
+            <div class="results-summary">
+              <div class="score-circle">
+                <svg width="200" height="200" viewBox="0 0 200 200">
+                  <circle class="circle-background" cx="100" cy="100" r="90"></circle>
+                  <circle class="circle-progress" id="progressCircle" cx="100" cy="100" r="90"
+                    stroke-dasharray="565.48" stroke-dashoffset="565.48"></circle>
+                </svg>
+                <div class="score-text" id="finalScoreText">0%</div>
+              </div>
+              
+              <div class="results-details">
+                <div class="rank-display">
+                  <div class="rank-label">BATTLE RANK</div>
+                  <div class="rank-value" id="rankValue">Calculating...</div>
+                  <div class="power-level" id="powerLevel">Power Level: ---</div>
+                </div>
+                
+                <div class="rank-display">
+                  <div class="rank-label">PERFORMANCE</div>
+                  <div class="rank-value" id="correctAnswers">-- / 20 Correct</div>
+                </div>
+                
+                <div class="performance-breakdown">
+                  <div class="performance-item correct-count">
+                    <span class="performance-icon">✓</span>
+                    <span class="performance-label">Correct</span>
+                    <span class="performance-value" id="correctCount">0</span>
+                  </div>
+                  <div class="performance-item incorrect-count">
+                    <span class="performance-icon">✗</span>
+                    <span class="performance-label">Incorrect</span>
+                    <span class="performance-value" id="incorrectCount">0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="character-portrait">
+              <div class="portrait-placeholder">
+                VEGETA<br>FINAL<br>ASSESSMENT
+              </div>
+              <div class="aura-overlay" id="auraOverlay"></div>
+            </div>
+            
+
+            
+            <div class="results-actions">
+              <button class="btn" id="retakeBtn">
+                ⚡ RETRY TRAINING
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</div>
+
+    <!-- JavaScript -->
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

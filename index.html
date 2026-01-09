@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Primary Meta Tags -->
+    <title>Vegeta's Elite Saiyan Quiz - Dragon Ball Z Knowledge Test</title>
+    <meta name="title" content="Vegeta's Elite Saiyan Quiz - Dragon Ball Z Knowledge Test">
+    <meta name="description" content="Think you have what it takes to impress the Prince of all Saiyans? Test your Dragon Ball Z knowledge with 20 elite questions. Earn your rank from Weakling to Legendary Super Saiyan!">
+    <meta name="keywords" content="Dragon Ball Z, DBZ Quiz, Vegeta, Saiyan, Anime Quiz, Dragon Ball Quiz, DBZ Trivia">
+    <meta name="author" content="Vegeta's Elite Training Academy">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vegeta's Elite Saiyan Quiz - Dragon Ball Z Knowledge Test">
+    <meta property="og:description" content="Think you have what it takes to impress the Prince of all Saiyans? Test your Dragon Ball Z knowledge with 20 elite questions!">
+    <meta property="og:image" content="assets/Elite.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Elite Saiyan Rank - Dragon Ball Z Quiz">
+    <meta property="og:url" content="">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Vegeta's Elite Saiyan Quiz">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vegeta's Elite Saiyan Quiz - Dragon Ball Z Knowledge Test">
+    <meta name="twitter:description" content="Think you have what it takes to impress the Prince of all Saiyans? Test your Dragon Ball Z knowledge with 20 elite questions!">
+    <meta name="twitter:image" content="assets/Elite.png">
+    <meta name="twitter:image:alt" content="Elite Saiyan Rank - Dragon Ball Z Quiz">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/fab.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/fab.ico">
+    <link rel="apple-touch-icon" href="assets/fab.ico">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#1a0f2e">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    
+    <!-- Anime.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+   <!-- VIDEO BACKGROUND WALLPAPER -->
+    <video id="backgroundVideo" class="background-video" autoplay muted loop>
+        <source src="assets/goku.mp4" type="video/mp4">
+    </video>
+    <div class="content-wrapper">
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-container">
+            <div class="energy-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="loading-spinner"></div>
+        </div>
+        <div class="loading-text" id="loadingText">Gathering Dragon Balls...</div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="app-wrapper">
+           
+
+            <!-- Main Content Area -->
+            <main class="content-area">
+                <section class="screen active" id="introScreen">
+                    <div class="intro-screen">
+                        <!-- Title Section -->
+                        <div class="title-container">
+                            <h1 class="quiz-title">ELITE SAIYAN QUIZ</h1>
+                            <div class="title-subtitle">Test Your Dragon Ball Z Knowledge</div>
+                        </div>
+
+                        <!-- Hero Badges -->
+                        <div class="intro-hero">
+                            <div class="hero-badge">
+                                <div class="badge-icon">📝</div>
+                                <div class="badge-text">20 QUESTIONS</div>
+                            </div>
+                            <div class="hero-badge">
+                                <div class="badge-icon">⚡</div>
+                                <div class="badge-text">ELITE CHALLENGE</div>
+                            </div>
+                            <div class="hero-badge">
+                                <div class="badge-icon">🏆</div>
+                                <div class="badge-text">POWER RANKING</div>
+                            </div>
+                        </div>
+
+                        <!-- Mission Briefing -->
+                        <div class="instructions">
+                            <h3>MISSION BRIEFING</h3>
+                            <ul>
+                                <li><strong>20 Questions</strong> testing your DBZ mastery</li>
+                                <li><strong>Multiple choice</strong> and true/false questions</li>
+                                <li><strong>Navigate freely</strong> between questions before submitting</li>
+                                <li><strong>Complete all questions</strong> to unlock final submission</li>
+                                <li><strong>Earn your rank</strong> from Weakling to Legendary Super Saiyan</li>
+                            </ul>
+                        </div>
+
+                        <!-- Rank Preview -->
+                        <div class="rank-preview">
+                            <h3>ACHIEVABLE RANKS</h3>
+                            <div class="rank-grid">
+                                <div class="rank-card platinum-rank">
+                                    <div class="rank-card-icon">👑</div>
+                                    <div class="rank-card-name">Legendary Super Saiyan</div>
+                                    <div class="rank-card-score">100</div>
+                                </div>
+                                <div class="rank-card gold-rank">
+                                    <div class="rank-card-icon">⭐</div>
+                                    <div class="rank-card-name">Elite Saiyan</div>
+                                    <div class="rank-card-score">90-99</div>
+                                </div>
+                                <div class="rank-card silver-rank">
+                                    <div class="rank-card-icon">🗡️</div>
+                                    <div class="rank-card-name">Battle-Hardened Warrior</div>
+                                    <div class="rank-card-score">70-89</div>
+                                </div>
+                                <div class="rank-card bronze-rank">
+                                    <div class="rank-card-icon">💪</div>
+                                    <div class="rank-card-name">Low-Class Warrior</div>
+                                    <div class="rank-card-score">50-69</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Warning Box -->
+                        <div class="warning-box">
+                            <div class="warning-icon">⚠️</div>
+                            <div class="warning-text">
+                                <strong>WARNING:</strong> This is not a game for weaklings. Vegeta expects perfection. Failure will not be tolerated.
+                            </div>
+                        </div>
+
+                        <!-- Theme Selector -->
+                        <div class="theme-selector">
+                            <h3>CHOOSE YOUR TRAINER</h3>
+                            <div class="theme-options">
+                                <button class="theme-btn active" id="lightThemeBtn" onclick="setTheme('light')">
+                                    <div class="theme-preview">
+                                        <div class="theme-icon">👑</div>
+                                        <div class="theme-name">VEGETA</div>
+                                        <div class="theme-desc">Prince of Saiyans</div>
+                                    </div>
+                                </button>
+                                <button class="theme-btn" id="darkThemeBtn" onclick="setTheme('dark')">
+                                    <div class="theme-preview">
+                                        <div class="theme-icon">🖤</div>
+                                        <div class="theme-name">DARK GOKU</div>
+                                        <div class="theme-desc">Shadow Warrior</div>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="theme-hint">
+                                Press <kbd>T</kbd> to toggle themes
+                            </div>
+                        </div>
+
+                        <!-- Start Button -->
+                        <button class="btn btn-start" id="startBtn">
+                            <span class="btn-icon">▶</span>
+                            BEGIN ELITE TRAINING
+                            <span class="btn-icon">◀</span>
+                        </button>
+                        
+                        <!-- Keyboard Hint -->
+                        <div class="keyboard-hint">
+                            Press <kbd>Enter</kbd> or <kbd>Space</kbd> to start
+                        </div>
+
+                        <!-- Creator Note -->
+                        <div class="creator-note">
+                            A tribute to Akira Toriyama's legendary Dragon Ball Z universe
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</div>
+
+    <!-- JavaScript -->
+    <script src="assets/main.js"></script>
+</body>
+</html>
