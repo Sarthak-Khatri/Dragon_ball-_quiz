@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .test-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .image-test {
+            margin: 20px 0;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+        .success { border-color: #4CAF50; background: #f0fff0; }
+        .error { border-color: #f44336; background: #fff0f0; }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+        .meta-info {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🔍 OG Image Test Page</h1>
+        <p>This page helps you test if the og.png image is loading correctly.</p>
+        
+        <div class="image-test" id="imageTest">
+            <h3>Image Loading Test</h3>
+            <p id="imageStatus">Testing...</p>
+            <img id="testImage" src="assets/og.png" alt="OG Image Test" style="display:none;">
+        </div>
+        
+        <div class="meta-info">
+            <h3>Current Meta Tags:</h3>
+            <div id="metaInfo"></div>
+        </div>
+        
+        <div class="meta-info">
+            <h3>Troubleshooting Steps:</h3>
+            <ol>
+                <li><strong>Check file exists:</strong> Make sure assets/og.png exists in your project</li>
+                <li><strong>Check file size:</strong> OG images should be under 8MB</li>
+                <li><strong>Check dimensions:</strong> Recommended 1200x630 pixels</li>
+                <li><strong>Check format:</strong> Use PNG, JPG, or WebP format</li>
+                <li><strong>Use absolute URLs:</strong> Social media platforms need full URLs</li>
+                <li><strong>Test with tools:</strong> Use Facebook Debugger or Twitter Card Validator</li>
+            </ol>
+        </div>
+        
+        <div class="meta-info">
+            <h3>Testing Tools:</h3>
+            <ul>
+                <li><a href="https://developers.facebook.com/tools/debug/" target="_blank">Facebook Sharing Debugger</a></li>
+                <li><a href="https://cards-dev.twitter.com/validator" target="_blank">Twitter Card Validator</a></li>
+                <li><a href="https://www.linkedin.com/post-inspector/" target="_blank">LinkedIn Post Inspector</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Test image loading
+        const img = document.getElementById('testImage');
+        const status = document.getElementById('imageStatus');
+        const testContainer = document.getElementById('imageTest');
+        
+        img.onload = function() {
+            status.textContent = '✅ Image loaded successfully!';
+            status.style.color = 'green';
+            testContainer.className = 'image-test success';
+            img.style.display = 'block';
+            
+            // Show image dimensions
+            const dimensions = document.createElement('p');
+            dimensions.textContent = `Image dimensions: ${img.naturalWidth} x ${img.naturalHeight}px`;
+            dimensions.style.fontSize = '12px';
+            dimensions.style.color = '#666';
+            status.appendChild(dimensions);
+        };
+        
+        img.onerror = function() {
+            status.textContent = '❌ Image failed to load! Check if assets/og.png exists.';
+            status.style.color = 'red';
+            testContainer.className = 'image-test error';
+        };
+        
+        // Display current meta tags
+        const metaInfo = document.getElementById('metaInfo');
+        const ogImage = document.querySelector('meta[property="og:image"]');
+        const twitterImage = document.querySelector('meta[name="twitter:image"]');
+        
+        let metaHtml = '';
+        if (ogImage) {
+            metaHtml += `<strong>OG Image:</strong> ${ogImage.getAttribute('content')}<br>`;
+        }
+        if (twitterImage) {
+            metaHtml += `<strong>Twitter Image:</strong> ${twitterImage.getAttribute('content')}<br>`;
+        }
+        metaHtml += `<strong>Current Domain:</strong> https://sarthak-khatri.github.io/Dragon_ball-_quiz/<br>`;
+        metaHtml += `<strong>Full Image URL:</strong> https://sarthak-khatri.github.io/Dragon_ball-_quiz/assets/og.png`;
+        
+        metaInfo.innerHTML = metaHtml;
+    </script>
+</body>
+</html>
