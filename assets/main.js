@@ -527,16 +527,20 @@ function initQuizPage() {
       
       choiceBtn.addEventListener('click', () => selectAnswer(index));
       
-      // Add touch support for mobile
+      // Add touch support for mobile (without preventing scroll)
       choiceBtn.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        choiceBtn.style.transform = 'translateX(5px) scale(0.98)';
+        // Only prevent default if it's not a scroll gesture
+        if (e.touches.length === 1) {
+          choiceBtn.style.transform = 'translateX(5px) scale(0.98)';
+        }
       });
       
       choiceBtn.addEventListener('touchend', (e) => {
-        e.preventDefault();
-        choiceBtn.style.transform = '';
-        selectAnswer(index);
+        // Only prevent default if it's not a scroll gesture
+        if (e.changedTouches.length === 1) {
+          choiceBtn.style.transform = '';
+          selectAnswer(index);
+        }
       });
       
       choicesContainer.appendChild(choiceBtn);
